@@ -1,0 +1,18 @@
+{
+  "source": "https://adaptfm.gitlab.io/competition-results/",
+  "team_id": "AFM-qd39x2e6",
+  "final_rank": 6,
+  "mean_speedup": 5.366,
+  "latency_ms": {
+    "short_64_tokens": 345,
+    "medium_2048_tokens": 881,
+    "long_8192_tokens": 2684
+  },
+  "quality": {
+    "mmlu_pro": 0.661,
+    "ifeval": 0.845,
+    "gpqa_diamond": 0.667
+  },
+  "official_description": "Migrated suffix K=128 to DFlash K=15"
+}
+

@@ -1,0 +1,24 @@
+.DS_Store
+.env
+.env.*
+!configs/recovered-dflash-k15.env
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+
+# Model and container artifacts
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.tar
+*.tar.gz
+models/
+artifacts/
+.cache/
+
+# Local evaluation output
+results/local/
+results/reproduction/
