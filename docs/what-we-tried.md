@@ -50,9 +50,9 @@ We measured around 13.8× at depth 40 on the A10G, but the startup cost climbed 
 depth (150 s at depth 40, 355 s at depth 80) and deeper settings bought nothing.
 
 **Suffix decoding, roughly two weeks.** Fast enough to lead on latency and never able to
-pass quality within the rules. With speculation on we could only hold about two of the
-eight concurrent quality requests in flight, and the tail ran past the 60-second limit.
-The full account is in [submission-history.md](submission-history.md).
+pass quality within the rules. Rejected drafts corrupt the recurrent state, generation
+runs away, and the runaways blow the 60-second per-sample limit. The full account is in
+[submission-history.md](submission-history.md).
 
 **Larger draft windows.** Our suffix configuration proposed 64 tokens over a tree 128
 deep and lost to DFlash at 15. That is not a clean comparison: we changed the drafting
@@ -69,6 +69,6 @@ It ran out of memory on a 24 GB card.
 
 ## The one that got away
 
-The dual-backend build passed every quality gate and briefly led the leaderboard before it
-was removed as benchmark routing. Getting the same behaviour out of one backend cost us
-the rest of the competition and about three quarters of the speed.
+The dual-backend build passed quality and reached #2 overall, first among entries that
+passed, before it was removed as benchmark routing. Getting the same behaviour out of one
+backend cost us the rest of the competition and about three quarters of the speed.

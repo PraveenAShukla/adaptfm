@@ -29,10 +29,11 @@ A 4-bit AWQ Qwen3.5-4B target, the public `z-lab/Qwen3.5-4B-DFlash` drafter at a
 
 ## The short version
 
-Our fastest entry ran at 20.982×, against the 7.745× that won, and it never counted. It
-failed the quality gate on an answer-extraction bug that looked nothing like a speed
-problem. Later configurations were faster still and never started at all, because we had
-flattened the container image to fit the size limit and broke its entrypoint.
+Speculative decoding on this model corrupts the recurrent state when drafts are rejected,
+so generation runs away and blows the 60-second per-sample limit on the quality
+evaluation. Our fastest entries were fast and wrong. One that passed, by serving the two
+evaluations from separate backends, reached #2 overall and was removed as benchmark
+routing. Five later submissions never started at all.
 
 The entry that ranked is the slow one that booted. That is most of what we learned.
 
