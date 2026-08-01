@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "DFlash K=15 for Qwen3.5-4B on a single A10G"
+message: "If you refer to this work, please cite it as below."
+type: software
+authors:
+  - given-names: Praveen A.
+    family-names: Shukla
+    affiliation: "Mohamed bin Zayed University of Artificial Intelligence"
+  - given-names: Noel
+    family-names: Thomas
+    affiliation: "Mohamed bin Zayed University of Artificial Intelligence"
+abstract: >-
+  Writeup and configuration for team AFM-qd39x2e6, which placed sixth in the
+  Efficient LLM Challenge at the AdaptFM workshop, ICML 2026. Serves
+  Qwen3.5-4B on one NVIDIA A10G at a 5.366x mean latency speedup using a
+  4-bit AWQ target with DFlash speculative decoding at K=15, passing the
+  MMLU-Pro, IFEval and GPQA-Diamond quality gates. Includes the submissions
+  that failed and why.
+keywords:
+  - speculative decoding
+  - LLM inference
+  - vLLM
+  - quantization
+  - Qwen3.5
+license: MIT
+repository-code: "https://github.com/PraveenAShukla/adaptfm"
+date-released: "2026-08-01"
